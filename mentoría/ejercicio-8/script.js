@@ -1,4 +1,6 @@
 
+//Hacer una función que reciba un array de palabras(strings) que retorne un array con la cantidad de vocales de cada palabra.
+
 const stringArrVocalQuantity = (strArr) => {
   let vocals = ['a', 'e', 'i', 'o', 'u']
   let word = ''

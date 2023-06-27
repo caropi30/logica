@@ -1,3 +1,6 @@
+
+//Crear una variable que reciba un string y retorne la misma, pero agregando después de cada carácter su índice correspondiente. 
+//Es decir, que retorne el mismo string transformado de la siguiente forma.
 function someFunction(letter, word) {
   //console.log(letter, word);
   for (let i = 0; i <= word.length; i++) {

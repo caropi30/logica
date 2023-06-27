@@ -1,3 +1,5 @@
+//Hacer una función que reciba un array y retorne otro array con la misma cantidad de elementos, pero que cada elemento sea el tipo de dato del array original.
+
 let arr2 = [];
 //V1
 const arrItemTypeOf = (arr) => {
