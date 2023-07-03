@@ -11,10 +11,19 @@
 const arr = ['hola', 'material girl', 'anatómico', 'pepito', 'rdr2']
 const arr2 = ['chao', 'apellido', 'monito', 'monkey', 'rambo', 'mika']
 
-
-const funcionConcatenaYVoltea = (arr, arr2) => {
+//Reversa con el método .reverse()
+const funcionConcatenaYVolteaReverse = (arr, arr2) => {
     const arrConcatenado = arr.concat(arr2)
      return arrConcatenado.reverse()
 }
 
-console.log(funcionConcatenaYVoltea(arr, arr2))
+console.log(funcionConcatenaYVolteaReverse(arr, arr2))
+
+//Reversa con el método toReversed()
+const funcionConcatenaYVolteaToReversed = (arr, arr2) => {
+    const arrConcatenado = arr.concat(arr2)
+    const arrReversado = arrConcatenado.toReversed()
+    return arrReversado
+}
+
+console.log(funcionConcatenaYVolteaToReversed(arr, arr2))
