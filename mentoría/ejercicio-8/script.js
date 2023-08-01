@@ -6,44 +6,29 @@
 3. ¿Qué son los números?, la representacón de la cantidad de ítems (vocales) que contiene cada string
 */
 
-/*PRIMERA PARTE*/
-/*Se iteran los strings para validar la cantidad de elementos que tiene cada uno y se agregan las catidades a una variable de tipo arr vacía, generando un listado de números*/
-const arr = ['hola', 'chao', 'aprendizaje', 'changuito']
-const vocals = ['a', 'e', 'i', 'o', 'u']
-const arrNum = []
-const arrNum2 = []
-const arr3 = []
-let qty = 0
-let qty2 = 0
+let arr = ['hola', 'chao']
+let arr2 = ['monito', 'mika', 'estereotipo', 'madona']
+let vocals = ['a', 'e', 'i', 'o', 'u']
+let nwArr = []
 
-const funcionContadora = arr => {
-  //console.log(arr)
-  for(let i = 0; i < arr.length; i++){
-   //console.log(arr[i])
-   //console.log(arr[i].length)
-    arrNum.push(arr[i].length)
-  }
-  return arrNum
-}
-
-console.log(funcionContadora(arr))
-
-
-/*SEGUNDA PARTE (EN PROCESO)*/
-/*Se iteran los ítems del array para validar si dentro tienen vocales*/
-const funcionContadoraVocales = arr => {
-  for(let i = 0; i < arr.length; i++){
-    //console.log(arr[i])
-    for(let x = 0; x < arr[i].length; x++){
-      //console.log(arr[i][x])
-      if(vocals.includes(arr[i][x])){ 
-         arr3.push(arr[i][x])
-        qty2 = qty2 +1
-console.log(qty2)
+function contadorVocales(arrPalabras, vocales){
+  let palabra = '';
+  for(let i = 0; i < arrPalabras.length; i++){
+    palabra = arrPalabras[i]
+    console.log(palabra)
+    let count = 0
+    for (let x = 0; x < palabra.length; x++){
+      console.log(palabra[x])
+      if(vocals.includes(palabra[x])){
+        count = count+1
+        console.log(count)
       }
-      console.log(arr3)
+    
     }
+    nwArr.push(count)
   }
+  console.log(nwArr)
 }
 
-funcionContadoraVocales(arr)
+
+contadorVocales(arr, vocals)
