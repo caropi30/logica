@@ -8,18 +8,23 @@
 */
 
 const arr = ['hola', 'material girl', 'anatómico', 'pepito', 'rdr2']
+const str = "esto no es un array"
 
 const voltearArr = arr => {
-  console.log(arr)
   let arrVolteado = ''
   const volteado = []
   const longitud = arr.length
   
-  for (let i = 0; i < longitud; i++) {
-    arrVolteado = arr.pop();
-    volteado.push(arrVolteado);
-  }
-  console.log(volteado)
+ if (typeof arr === "object") {
+   for (let i = 0; i < longitud; i++) {
+     arrVolteado = arr.pop();
+     volteado.push(arrVolteado);
+   }
+   console.log(volteado);
+ } else {
+   console.log("esto no es un array");
+ }
 }
 
 voltearArr(arr)
+voltearArr(str)
