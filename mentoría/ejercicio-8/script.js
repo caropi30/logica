@@ -9,9 +9,10 @@
 let arr = ['hola', 'chao']
 let arr2 = ['monito', 'mika', 'estereotipo', 'madona']
 let vocals = ['a', 'e', 'i', 'o', 'u']
-let nwArr = []
+
 
 function contadorVocales(arrPalabras, vocales){
+  let nwArr = [];
   let palabra = '';
   for(let i = 0; i < arrPalabras.length; i++){
     palabra = arrPalabras[i]

@@ -9,8 +9,17 @@
 
 const arr = ['hola', 'material girl', 'anatómico', 'pepito', 'rdr2']
 
-const funcionVolteaArr = data => {
-  typeof(arr) === 'object' ? console.log(data.reverse(), true) : console.log(`Esto no es un array ${false}`)
+const voltearArr = arr => {
+  console.log(arr)
+  let arrVolteado = ''
+  const volteado = []
+  const longitud = arr.length
+  
+  for (let i = 0; i < longitud; i++) {
+    arrVolteado = arr.pop();
+    volteado.push(arrVolteado);
+  }
+  console.log(volteado)
 }
 
-funcionVolteaArr(arr)
+voltearArr(arr)

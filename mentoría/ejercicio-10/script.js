@@ -7,33 +7,41 @@
 */
 
 
-const objKeys = { "a":1, "b":2, "c":3 }
-const arrFilter = ["b", "i", "a", "o"];
+const obj = { "a":1, "b":2, "c":3 }
+const arr = ["b"];
 
 
-const keyFilter = (param1,param2) => {
-    const keyAndArrMatch = []
-    console.log(param1,param2)
-    const keys = Object.keys(param1);
-    console.log(keys);
-    for(let i = 0; i < keys.length; i++){
-        //console.log(keys[i])
-        let singleKey = keys[i];
-        for (let j = 0; j < param2.length; j++){
-            let matchItem = ''
-           // console.log(param2[j])
-            if(param2[j] === singleKey){
-                console.log('coinciden')
-                matchItem = param2[j]
-                console.log(matchItem)
-                keyAndArrMatch.push(matchItem)
-            }
-        }
-       console.log(keyAndArrMatch)
-    }
+const filtrar = (obj, arr) => {
+    arr.filter((item) =>
+        console.log(item)
+      //item === Object.keys(obj) ? console.log(true) : console.log(false)
+    );
 }
 
-keyFilter(objKeys, arrFilter)
+filtrar(obj, arr);
+
+// const keyFilter = (param1,param2) => {
+//     const keyAndArrMatch = []
+//     console.log(param1,param2)
+//     
+//     console.log(keys);
+//     for(let i = 0; i < keys.length; i++){
+//         //console.log(keys[i])
+//         let singleKey = keys[i];
+//         for (let j = 0; j < param2.length; j++){
+//             let matchItem = ''
+//            // console.log(param2[j])
+//             if(param2[j] === singleKey){
+//                 console.log('coinciden')
+//                 matchItem = param2[j]
+//                 console.log(matchItem)
+//                 keyAndArrMatch.push(matchItem)
+//             }
+//         }
+//        console.log(keyAndArrMatch)
+//     }
+// }
+
 
 
 /*PARTE 2:
