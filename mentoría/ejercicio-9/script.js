@@ -1,6 +1,8 @@
 /*Crear una función que replique el funcionamiento de Array reverse, o dicho de otra manera,
  codificar una función que reciba como parámetro un array, e invierta el orden de los elementos.*/
 
+const { LoneSchemaDefinitionRule } = require("graphql");
+
 /*
     1. Entra:  Debería entrar un array
     2. Sale: Debería salir un array con ítems a la inversa y con validación de tipo
@@ -8,23 +10,23 @@
 */
 
 const arr = ['hola', 'material girl', 'anatómico', 'pepito', 'rdr2']
-const str = "esto no es un array"
+const str = 'soy un string'
+const reverse = (param)=> {
+  // let index = 0
+  // let shiftElement = null;
 
-const voltearArr = arr => {
-  let arrVolteado = ''
-  const volteado = []
-  const longitud = arr.length
-  
- if (typeof arr === "object") {
-   for (let i = 0; i < longitud; i++) {
-     arrVolteado = arr.pop();
-     volteado.push(arrVolteado);
-   }
-   console.log(volteado);
- } else {
-   console.log("esto no es un array");
- }
+  if(Array.isArray(param)){
+    for(let i = 0; i < arr.length; i++){
+    index = param.length - (i + 1)
+    shiftElement = param.shift()
+    param.splice(index, 0, shiftElement)
+  }
+  console.log(param, true)
+  }
+  else{
+    console.log(param, false)
+  }
 }
 
-voltearArr(arr)
-voltearArr(str)
+reverse(arr)
+reverse(str)
