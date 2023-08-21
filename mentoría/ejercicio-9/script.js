@@ -12,8 +12,8 @@ const { LoneSchemaDefinitionRule } = require("graphql");
 const arr = ['hola', 'material girl', 'anatómico', 'pepito', 'rdr2']
 const str = 'soy un string'
 const reverse = (param)=> {
-  // let index = 0
-  // let shiftElement = null;
+  let index = 0
+  let shiftElement = null;
 
   if(Array.isArray(param)){
     for(let i = 0; i < arr.length; i++){
