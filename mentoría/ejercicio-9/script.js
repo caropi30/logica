@@ -29,4 +29,5 @@ const reverse = (param)=> {
 }
 
 reverse(arr)
+console.log(arr)
 reverse(str)
