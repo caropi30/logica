@@ -7,7 +7,7 @@ function two (word, letter) {
     if (word[i] === letter) {
       quantity++
   }
-    return quantity
+    return quantity 
 }
 
 two('aleluya', 'a')
