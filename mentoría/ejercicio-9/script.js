@@ -14,8 +14,9 @@ const str = 'soy un string'
 const reverse = (param)=> {
   let index = 0
   let shiftElement = null;
+  let isAnArray = Array.isArray(param)
 
-  if(Array.isArray(param)){
+  if(isAnArray){
     for(let i = 0; i < arr.length; i++){
     index = param.length - (i + 1)
     shiftElement = param.shift()
