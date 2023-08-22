@@ -1,8 +1,6 @@
 /*Crear una función que replique el funcionamiento de Array reverse, o dicho de otra manera,
  codificar una función que reciba como parámetro un array, e invierta el orden de los elementos.*/
 
-const { LoneSchemaDefinitionRule } = require("graphql");
-
 /*
     1. Entra:  Debería entrar un array
     2. Sale: Debería salir un array con ítems a la inversa y con validación de tipo
@@ -22,10 +20,10 @@ const reverse = (param)=> {
     shiftElement = param.shift()
     param.splice(index, 0, shiftElement)
   }
-  console.log(param, true)
+  console.log(true)
   }
   else{
-    console.log(param, false)
+    console.log(false)
   }
 }
 
