@@ -1,14 +1,13 @@
-/*Este ejercicio consta de dos partes*/
+/* Este ejercicio consta de dos partes */
 
-/*PARTE 1:
+/* PARTE 1:
     Escribir una función que reciba un objeto como primer parámetro obj y un array filtros de strings como segundo parámetro. 
     Dado un objeto particular, la función filtrarKeys deberá retornar una lista de las propiedades 
     ( es decir, una lista de keys) que contenga alguno de los elementos del array filtros en su nombre. 
 */
 
-
-const obj = { "a":1, "b":2, "c":3 }
-const arr = ["b"];
+const obj = { a: 1, b: 2, c: 3 }
+const arr = ['b']
 
 
 const filtrar = (obj, arr) => {
