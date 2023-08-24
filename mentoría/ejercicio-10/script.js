@@ -9,10 +9,9 @@
 const obj = { a: 1, b: 2, c: 3 }
 const arr = ['b']
 
-
 const filtrar = (obj, arr) => {
-    arr.filter((item) =>
-        console.log(item)
+  arr.filter((item) =>
+    console.log(item)
       //item === Object.keys(obj) ? console.log(true) : console.log(false)
     );
 }
