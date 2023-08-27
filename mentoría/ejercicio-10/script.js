@@ -7,42 +7,35 @@
 */
 
 const obj = { a: 1, b: 2, c: 3 }
-const arr = ['b']
+const arr = ['a','b']
+const arrKeys = []
 
-const filtrar = (obj, arr) => {
-  arr.filter((item) =>
-    console.log(item)
-      //item === Object.keys(obj) ? console.log(true) : console.log(false)
-    );
+function filtrarKeys (obj, arrFiltro, inclusion = true){
+  let key = ''
+  const keys = Object.keys(obj)
+
+  if (!inclusion) {
+     for (let i = 0; i < keys.length; i++) {
+         key = keys[i]
+         if (!arrFiltro.includes(key)) {
+             arrKeys.push(key)
+         }
+     }
+ } else {
+  for (let i = 0; i < keys.length; i++) {
+      key = keys[i]
+      if (arrFiltro.includes(key)) {
+          arrKeys.push(key)
+      }
+    }
+  }
+  console.log(arrKeys)
 }
 
-filtrar(obj, arr);
+filtrarKeys(obj, arr)
+//filtrarKeys(obj, arr, false)
 
-// const keyFilter = (param1,param2) => {
-//     const keyAndArrMatch = []
-//     console.log(param1,param2)
-//     
-//     console.log(keys);
-//     for(let i = 0; i < keys.length; i++){
-//         //console.log(keys[i])
-//         let singleKey = keys[i];
-//         for (let j = 0; j < param2.length; j++){
-//             let matchItem = ''
-//            // console.log(param2[j])
-//             if(param2[j] === singleKey){
-//                 console.log('coinciden')
-//                 matchItem = param2[j]
-//                 console.log(matchItem)
-//                 keyAndArrMatch.push(matchItem)
-//             }
-//         }
-//        console.log(keyAndArrMatch)
-//     }
-// }
-
-
-
-/*PARTE 2:
+/* PARTE 2:
     Agregar a la función filtrarKeys un tercer parámetro opcional que indique si se desea filtrar por inclusion o exclusion. 
     Por defecto, es decir si ningún parámetro es especificado, la función deberá filtrar por inclusion.
 */
