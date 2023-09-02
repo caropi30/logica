@@ -29,11 +29,11 @@ function filtrarKeys (obj, arrFiltro, inclusion = true){
       }
     }
   }
-  console.log(arrKeys)
+  return arrKeys
 }
 
-filtrarKeys(obj, arr)
-//filtrarKeys(obj, arr, false)
+console.log(filtrarKeys(obj, arr))
+console.log(filtrarKeys(obj, arr, false))
 
 /* PARTE 2:
     Agregar a la función filtrarKeys un tercer parámetro opcional que indique si se desea filtrar por inclusion o exclusion. 
