@@ -12,20 +12,25 @@
 
 const arr = ['hola', 'material girl', 'anatómico', 'pepito', 'rdr2']
 const arr2 = ['chao', 'apellido', 'monito', 'monkey', 'rambo', 'mika']
+const arr3 = ['chao']
+const arrFalso = 'que te pasa'
 
 
 function imprimirImpares(arr) {
     const emptyArr = []
-    arr.forEach((item, index) => {
-        if(index % 2 !== 0){
-            emptyArr.push(item)
-        }
-        return null
 
-    })
-
-    return emptyArr
+    if(Array.isArray(arr)){
+        arr.forEach((item, index) => {
+            if (index % 2 !== 0) {
+                emptyArr.push(item)
+            }
+        })
+        return emptyArr
+    }
+    return 'Este dato no es un array'
 }
-
 console.log(imprimirImpares(arr))
 console.log(imprimirImpares(arr2))
+console.log(imprimirImpares(arr3))
+console.log(imprimirImpares(arrFalso))
+

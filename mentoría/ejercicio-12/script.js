@@ -47,75 +47,87 @@ let filtro2 = {
     edad: 55
 };
 
-filtrarUsuarios(users, filtro2) // retorna un array vació []
+filtrarUsuarios(users, filtro2) // retorna un array vacio []
 
 
 */
 
-// const arr = [
-//     {
-//         nombre: 'Ignacia',
-//         apellido: 'Faundez',
-//         edad: 32,
-//     },{
-//         nombre: 'Camila',
-//         apellido: 'Pirela',
-//         edad: 34,
-//     },
-//     {
-//         nombre: 'Fabiola',
-//         apellido: 'Centellas',
-//         edad: 28,
-//     }
-// ]
+const arr = [
+    {
+        nombre: 'Ignacia',
+        apellido: 'Faundez',
+        edad: 32,
+    },
+    {
+        nombre: 'Camila',
+        apellido: 'Pirela',
+        edad: 34,
+    },
+    {
+        nombre: 'Fabiola',
+        apellido: 'Centellas',
+        edad: 28,
+    },
+    {
+        nombre: 'Ernesto',
+        apellido: 'Chamito',
+        edad: 34,
+    },
+]
 
-const arr2 = {
-    nombre: 'Ignacia',
-    apellido: 'Faundez',
-    edad: 32,
-}
+const arr2 = [
+    {
+        nombre: 'Ignacia',
+        apellido: 'Faundez',
+        edad: 32,
+    },
+]
 
 const obj = {
     edad: 32,
 }
 
-// const obj2 = {
-//     edad: 32,
-// }
-let objStr = ''
-
-function filtrarObj(obj) {
-    const objKeys = []
-
-    for (const [key, value] of Object.entries(obj)) {
-        objKeys.push(`${key}: ${value}`)
-    }
-
-    objStr = objKeys.join()
-    return objStr
+const obj2 = {
+    edad: 28,
 }
 
-filtrarObj(obj)
+const obj3 = {
+    edad: 34,
+}
 
-function filtrarArr(arr) {
-    const arrFilter = []
-    for (const [key, value] of Object.entries(arr)) {
-        arrFilter.push(`${key}: ${value}`)
-        //console.log(arrFilter)
-        for (let i = 0; i < arrFilter.length; i++) {
-            if (arrFilter.includes(objStr)) {
-                return 'línea 56, coincide el:', arrFilter[i]
-            } else {
-                return 'no coincide el:', arrFilter[i]
+const filtrarUsuarios = (user, filtro) => {
+    let singleUser = {}
+    let iterableSingleUserKeys = []
+    let iterableSingleUserKeyStr = ''
+    let iterableSingleUserKeyToObj = {}
+    let finalArr = []
+    const filtroEntries = `${Object.entries(filtro)}`
+
+    user.forEach(obj => {
+        singleUser = obj
+        iterableSingleUserKeys = Object.entries(singleUser)
+        
+        iterableSingleUserKeys.forEach(itemKey => {
+            iterableSingleUserKeyStr = `${itemKey}`
+
+            if (Object.is(filtroEntries, iterableSingleUserKeyStr)) {
+                iterableSingleUserKeyToObj = Object.fromEntries(iterableSingleUserKeys)
+                finalArr.push(obj)
             }
-        }
+        })
+    })
+  
+    if(finalArr.length === 1){
+        return iterableSingleUserKeyToObj
+    }else {
+        return finalArr
     }
+
 }
+console.log(filtrarUsuarios(arr, obj))
+console.log(filtrarUsuarios(arr2, obj2))
+console.log(filtrarUsuarios(arr, obj2))
+console.log(filtrarUsuarios(arr, obj3))
 
-console.log(filtrarArr(arr2))
 
-// function filtrarUsr( obj){
-//     filtrarObj(obj)
-// }
 
-// console.log(filtrarUsr(obj))
