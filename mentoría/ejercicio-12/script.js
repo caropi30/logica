@@ -100,7 +100,7 @@ const filtrarUsuarios = (user, filtro) => {
     let iterableSingleUserKeys = []
     let iterableSingleUserKeyStr = ''
     let iterableSingleUserKeyToObj = {}
-    let finalArr = []
+    const finalArr = []
     const filtroEntries = `${Object.entries(filtro)}`
 
     user.forEach(obj => {
@@ -119,7 +119,7 @@ const filtrarUsuarios = (user, filtro) => {
   
     if(finalArr.length === 1){
         return iterableSingleUserKeyToObj
-    }else {
+    } else {
         return finalArr
     }
 
