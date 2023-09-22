@@ -1,6 +1,6 @@
 ## Hola Amig@! 👋
 
-Este es un proyecto que desarrolle siguiendo las pautas de los ejericios disponibilizados por Carlos Alzate, quién a su vez desarrollo estos ejercicios en pro de ayudar a crecer y avanzar en el estudio del lenguaje Javescript. 
+Este es un proyecto que desarrolle siguiendo las pautas de los ejericios disponibilizados en el repositorio [ejercicios_de_Javascript](https://github.com/carlosandresalzate/ejercicios_de_Javascript), los cuales a su vez ayudan a crecer y avanzar en el estudio del lenguaje Javescript. 
 
 Cada ejercicio presenta una complejidad diferente y permiten ser abordados de distintas maneras para validar el conocimiento que se tiene sobre el lenguaje y la lógica que allí se presenta.
 
