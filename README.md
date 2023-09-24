@@ -6,7 +6,7 @@ Cada ejercicio presenta una complejidad diferente y permiten ser abordados de di
 
 ## Agradecimientos
 
-Quiero agradecer enormemente por el apoyo brindado de Carlos hacia mi persona, quién ha sido un pilar fundamental en mi crecimiento profesional en el desarrollo de lógica, conocimiento del lenguaje JS.
+Quiero agradecer enormemente por el apoyo brindado de Carlos hacia mi persona, quién ha sido un pilar fundamental en mi crecimiento profesional en el desarrollo de lógica y conocimiento del lenguaje JS.
 
 Si tienes algún interés sobre parcticar los ejercicios, dejo el [repo original](https://github.com/carlosandresalzate/ejercicios_de_Javascript)  para qu ele puedas echar un vistazo y así practicar y trabajar en tu crecimiento con JS.
 
