@@ -13,6 +13,7 @@
      # # # #
     # # # #
      # # # #
+     
     Cuando tengas un programa que genere este patrón, define una vinculación tamaño = 8 
     y cambia el programa para que funcione con cualquier tamaño, dando como salida una cuadrícula
      con el alto y ancho dados.
