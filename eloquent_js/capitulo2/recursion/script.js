@@ -16,3 +16,24 @@
     Pruébalo con 50 y 75. Observa cómo se comporta con -1. Por qué? 
     Puedes pensar en una forma de arreglar esto?
 */
+
+const verdadero = true
+const falso = false
+
+function esPar(numEnteroPositivo) {
+    function siEsPar(numActual) {
+        if (numActual === 0) {
+            return verdadero
+        } else if (numActual === 1) {
+            return falso, 'es 1'
+        } else {
+            return siEsPar(numActual - 2)
+        }
+    }
+    return siEsPar(numEnteroPositivo)
+}
+
+
+console.log(esPar(50))
+console.log(esPar(75))
+
