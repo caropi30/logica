@@ -25,7 +25,7 @@ function esPar(numEnteroPositivo) {
         if (numActual === 0) {
             return verdadero
         } else if (numActual === 1) {
-            return falso, 'es 1'
+            return falso
         } else {
             return siEsPar(numActual - 2)
         }
