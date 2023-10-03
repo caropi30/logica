@@ -26,14 +26,60 @@ const rango = (arg1, arg2) => {
     return rangoCompleto
 }
 
+console.log('rango: ', rango(2, 8))
+
 // Segunda parte
-const sumar = arr => {
+const sumar = (arr) => {
     let sumatoria = 0
-    arr.forEach(element => {
+    arr.forEach((element) => {
         sumatoria += element
     })
     return sumatoria
 }
 
-console.log('sumar: ', sumar(rango(1, 10)))
-console.log('sumar: ', sumar(rango(2, 4)))
+console.log('sumar rango: ', sumar(rango(1, 10)))
+console.log('sumar rango: ', sumar(rango(2, 4)))
+
+//Tercera parte
+const rangoConTercerParametro = (arg1, arg2, arg3) => {
+    let rangoCompleto = []
+    const cero = 0
+    if (arg3 > cero) {
+        console.log('arg3: ', arg3)
+        for (let i = arg1; i <= arg2; i += arg3) {
+            rangoCompleto.push(i)
+        }
+    } else if (arg3 < cero) {
+        for (let i = arg2; i >= arg3; i -= Math.abs(arg3)) {
+            if (i <= 0) {
+                rangoCompleto.push(i)
+                break
+            } else {
+                rangoCompleto.push(i)
+            }
+        }
+    } else {
+        for (let i = arg1; i <= arg2; i++) {
+            rangoCompleto.push(i)
+        }
+    }
+    return rangoCompleto
+}
+
+console.log('arg3 positivo: ', rangoConTercerParametro(1, 10, 2))
+console.log('arg3 negativo: ', rangoConTercerParametro(1, 10, -2))
+console.log('arg3 no existe', rangoConTercerParametro(1, 10))
+
+console.log(
+    'sumar rangoConTercerParametro: arg3 positivo ',
+    sumar(rangoConTercerParametro(1, 10, 2))
+)
+
+console.log(
+    'sumar rangoConTercerParametro:  arg3 negativo ',
+    sumar(rangoConTercerParametro(1, 10, -2))
+)
+console.log(
+    'sumar rangoConTercerParametro: arg3 no existe ',
+    sumar(rangoConTercerParametro(1, 10))
+)
