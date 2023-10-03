@@ -52,11 +52,9 @@ const rangoConTercerParametro = (arg1, arg2, arg3) => {
     } else if (arg3 < cero) {
         for (let i = arg2; i >= arg3; i -= Math.abs(arg3)) {
             if (i <= 0) {
-                rangoCompleto.push(i)
                 break
-            } else {
-                rangoCompleto.push(i)
-            }
+            } 
+            rangoCompleto.push(i)
         }
     } else {
         for (let i = arg1; i <= arg2; i++) {
