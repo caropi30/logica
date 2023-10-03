@@ -35,4 +35,5 @@ const sumar = arr => {
     return sumatoria
 }
 
+console.log('sumar: ', sumar(rango(1, 10)))
 console.log('sumar: ', sumar(rango(2, 4)))
