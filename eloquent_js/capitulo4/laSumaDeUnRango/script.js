@@ -41,11 +41,10 @@ console.log('sumar rango: ', sumar(rango(1, 10)))
 console.log('sumar rango: ', sumar(rango(2, 4)))
 
 //Tercera parte
-const rangoConTercerParametro = (arg1, arg2, arg3) => {
+const rangoConTercerParametro = (arg1, arg2, arg3 = 1) => {
     let rangoCompleto = []
     const cero = 0
     if (arg3 > cero) {
-        console.log('arg3: ', arg3)
         for (let i = arg1; i <= arg2; i += arg3) {
             rangoCompleto.push(i)
         }
@@ -57,7 +56,7 @@ const rangoConTercerParametro = (arg1, arg2, arg3) => {
             rangoCompleto.push(i)
         }
     } else {
-        for (let i = arg1; i <= arg2; i++) {
+        for (let i = arg1; i <= arg2; i+arg3) {
             rangoCompleto.push(i)
         }
     }
