@@ -12,7 +12,13 @@
 
 // revertirArray
 
-const revertirArray = arr => arr.toReversed()
+const revertirArray = arr => {
+    const arrRevertido = []
+    for (let i = arr.length - 1; i >= 0; i--){
+        arrRevertido.push(arr[i])
+    }
+    return arrRevertido
+}
 
 console.log(revertirArray(['hola', 'mundo']))
 
