@@ -47,7 +47,7 @@ const arrayALista = (arr) => {
     return lista
 }
 
-console.log(arrayALista([1, 2, 3]))
+//console.log(arrayALista([1, 2, 3]))
 
 const listaAArray = (lista) => {
     const listaFinal = []
@@ -69,7 +69,7 @@ const listaAArray = (lista) => {
     return listaFinal
 }
 
-console.log(listaAArray(arrayALista([1, 2, 3])))
+//console.log(listaAArray(arrayALista([1, 2, 3])))
 
 const preceder = (elemento, lista) =>{
     const preceder = {
@@ -79,4 +79,21 @@ const preceder = (elemento, lista) =>{
     return preceder
 }
 
-console.log(preceder(10, preceder(arrayALista([1, 2, 3]))))
+//console.log(preceder(10, preceder(arrayALista([1, 2, 3]))))
+
+const posicion = (posicion, lista) => {
+    const listado = listaAArray(lista)
+    let posicionFinal = null
+    listado.forEach((elemento, indice) => {
+        //console.log(elemento, indice)
+        if (posicion === indice) {
+            posicionFinal = elemento
+        }
+    })
+
+    console.log(posicionFinal)
+}
+
+//console.log(posicion(arrayALista([1, 2, 3])))
+posicion(1,arrayALista([10, 20, 30]))
+//posicion(arrayALista([10, 20, 30]))
