@@ -70,3 +70,13 @@ const listaAArray = (lista) => {
 }
 
 console.log(listaAArray(arrayALista([1, 2, 3])))
+
+const preceder = (elemento, lista) =>{
+    const preceder = {
+        value: elemento,
+        rest: lista,
+    }
+    return preceder
+}
+
+console.log(preceder(10, preceder(arrayALista([1, 2, 3]))))
