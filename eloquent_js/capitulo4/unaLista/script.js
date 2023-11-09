@@ -91,9 +91,10 @@ const posicion = (posicion, lista) => {
         }
     })
 
-    console.log(posicionFinal)
+    return posicionFinal
 }
 
 //console.log(posicion(arrayALista([1, 2, 3])))
-posicion(1,arrayALista([10, 20, 30]))
+console.log(posicion(1, arrayALista([10, 20, 30])))
+console.log(posicion(2, arrayALista([10, 20, 30])))
 //posicion(arrayALista([10, 20, 30]))
