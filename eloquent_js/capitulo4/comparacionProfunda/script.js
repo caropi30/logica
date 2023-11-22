@@ -21,34 +21,38 @@
     // → true
 
 */
-
 const igualdadProfunda = (param1, param2) => {
     const typeofParam1 = typeof param1
     const typeofParam2 = typeof param2
-    const objKeysParam1 = Object.keys(param1)
-    const objKeysParam2 = Object.keys(param2)
     
-     if (param1 == null || param2 == null) {
-         console.log(false)
-     }
+    if (
+        typeofParam1 == null ||
+        typeofParam1 == null ||
+        typeofParam1 !== 'object' ||
+        typeofParam2 !== 'object'
+    ) {
+        return false
+    }
 
-     if (param1 == param2) {
-        console.log('ambos son iguales')
-     }
+    if (param1 == param2) {
+        return true
+    }
 
-     if(param1 != param2) {
-        console.log('espera!! son diferentes')
-     }
+    if (!Object.keys(param1) || !Object.keys(param2)) {
+        return false
+    }
 
+    return true
 
 }
 
 
-igualdadProfunda(1,2)
-igualdadProfunda(2, 2)
-igualdadProfunda({ key: 'valor'}, 2)
-igualdadProfunda(true, false)
-igualdadProfunda(true, null)
+console.log(igualdadProfunda(1,2))
+console.log(igualdadProfunda(2,2))
+console.log(igualdadProfunda({ key: 'valor'}, 2))
+console.log(igualdadProfunda(true, false))
+console.log(igualdadProfunda(true, null))
+console.log(igualdadProfunda({ key: 'valor' }, { key: 'valor' }))
 
 // const listaAArray = (lista) => {
 //     const lista2 = (value) => {
