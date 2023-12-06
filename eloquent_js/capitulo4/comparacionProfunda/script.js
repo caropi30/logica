@@ -34,14 +34,11 @@
     }
 
     if (param1 == param2) {
-       return true
-    }
+        const objKeys1 = Object.keys(param1)
+        const objKeys2 = Object.keys(param2)
 
-    if (!Object.keys(param1) || !Object.keys(param2)) {
-        return false
+        igualdadProfunda(objKeys1, objKeys2)
     }
-
-    
 
     return true
 
