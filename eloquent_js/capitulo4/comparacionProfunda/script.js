@@ -20,8 +20,7 @@
     console.log(igualdadProfunda(objeto, {aqui: {hay: "un"}, objeto: 2}));
     // → true
 
-*/
-const igualdadProfunda = (param1, param2) => {
+*/const igualdadProfunda = (param1, param2) => {
     const typeofParam1 = typeof param1
     const typeofParam2 = typeof param2
     
@@ -35,12 +34,14 @@ const igualdadProfunda = (param1, param2) => {
     }
 
     if (param1 == param2) {
-        return true
+       return true
     }
 
     if (!Object.keys(param1) || !Object.keys(param2)) {
         return false
     }
+
+    
 
     return true
 
@@ -53,18 +54,3 @@ console.log(igualdadProfunda({ key: 'valor'}, 2))
 console.log(igualdadProfunda(true, false))
 console.log(igualdadProfunda(true, null))
 console.log(igualdadProfunda({ key: 'valor' }, { key: 'valor' }))
-
-// const listaAArray = (lista) => {
-//     const lista2 = (value) => {
-//         Object.entries(value).forEach(([key, value]) => {
-//             if (!isNaN(value)) {
-//                 listaFinal.push(value)
-//                 return listaFinal
-//             } else {
-//                 lista2(value)
-//             }
-//         })
-//     }
-    
-//     lista2(lista)
-// }
