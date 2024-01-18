@@ -12,21 +12,6 @@
     // → 1
 */
 
-// function esPar(numEnteroPositivo) {
-//     function siEsPar(numActual) {
-//         if (numActual === 0) {
-//             return verdadero
-//         } else if (numActual === 1) {
-//             return falso
-//         } else {
-//             return siEsPar(numActual - 2)
-//         }
-//     }
-//     return siEsPar(numEnteroPositivo)
-// }
-
-for(let  = 0; i > 0; i--)
-
 function ciclo (valor, funcionPrueba, funcionActualizacion) {
   function funcionPrueba(valorActual){
     return funcionActualizacion(valorActual)
