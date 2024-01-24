@@ -12,10 +12,12 @@
     // → 1
 */
 
+//Solución con recursividad
 function ciclo (valor, funcionPrueba, funcionActualizacion) {
   function funcionPrueba(valorActual){
     return funcionActualizacion(valorActual)
   }
+  cuerpodeFuncion(valor)
   return funcionPrueba(valor)
 }
 
@@ -24,3 +26,10 @@ ciclo(
     (n) => n > 0,
     (n) => n - 1,
 )
+
+//Solución for loop
+const cicloFor = (valor, funcionPrueba, funcionActualizacion, cuerpoDeFuncion) => {
+  for(let i = valor; funcionPrueba(i); valor = funcionActualizacion(valor)){
+    cuerpoDeFuncion(valor)
+  }
+}
