@@ -13,12 +13,12 @@
 */
 
 //Solución con recursividad
-function ciclo (valor, funcionPrueba, funcionActualizacion) {
-  function funcionPrueba(valorActual){
-    return funcionActualizacion(valorActual)
-  }
-  cuerpodeFuncion(valor)
-  return funcionPrueba(valor)
+function ciclo(valor, funcionPrueba, funcionActualizacion, cuerpoDeFuncion) {
+    function funcionPrueba(valorActual) {
+        return funcionActualizacion(valorActual)
+    }
+    cuerpodeFuncion(valor)
+    return funcionPrueba(valor)
 }
 
 ciclo(
